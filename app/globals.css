@@ -9,11 +9,11 @@
 
 body {
   background-color: #f6f8fa;
-  font-size: 17px; /* Increased base size */
-  font-family: "Segoe UI", "Bogle", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  font-family: EverydaySans, "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6; /* Slightly taller lines */
+  line-height: 1.6;
 }
 
 input::placeholder {
@@ -32,11 +32,13 @@ input::placeholder {
   --walmart-light-gray: #f8f9fa;
 }
 
+/* Headings use the same font */
 h1, h2, h3, h4, h5, h6, p {
-  font-family: "Segoe UI", "Bogle", sans-serif;
+  font-family: EverydaySans, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 
+/* App wrapper */
 .app {
   min-height: 100vh;
   background-color: var(--walmart-light-blue);
