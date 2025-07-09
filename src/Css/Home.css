@@ -1,0 +1,66 @@
+.home {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  background-color: #f0f6ff;
+  min-height: 100vh;
+}
+
+.home__container {
+  width: 100%;
+}
+
+.home__image {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.home__row {
+  display: flex;
+  z-index: 1;
+  margin: 20px;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Walmart-style promotional banner */
+.walmart-banner {
+  background: linear-gradient(135deg, #ffc220 0%, #ffb000 100%);
+  color: #000;
+  padding: 24px;
+  margin: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.walmart-banner h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.walmart-banner p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.walmart-banner button {
+  background-color: #0071ce;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.walmart-banner button:hover {
+  background-color: #004c91;
+}

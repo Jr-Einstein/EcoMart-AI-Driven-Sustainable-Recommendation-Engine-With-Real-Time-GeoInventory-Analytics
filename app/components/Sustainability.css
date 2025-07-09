@@ -1,0 +1,134 @@
+.Susback {
+  background-color: #f0f6ff;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.links {
+  background-color: #f0f6ff;
+  position: relative; 
+  top: -8rem;
+  left: 2rem;
+  padding: 20px;
+}
+
+.reports-heading {
+  font-family: "Bogle", sans-serif;
+  font-size: 24px;
+  color: #0071ce;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+.links a {
+  font-family: "Bogle", sans-serif;
+  color: #0071ce;
+  font-size: 20px;
+  margin-right: 15px;
+  text-decoration: none;
+  display: inline;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.links a:hover {
+  background-color: #0071ce;
+  color: white;
+}
+
+.overview-section {
+  position: relative;
+  top: -2rem;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.Overview {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+.results-section {
+  position: relative;
+  top: -1rem;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.Results {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+.parameters {
+  display: flex;
+  position: relative;
+  top: -4rem;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.one, .two, .three {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  width: 300px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffc220;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.one:hover, .two:hover, .three:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.stat-content {
+  text-align: center;
+}
+
+.stat-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: "Bogle", sans-serif;
+}
+
+.stat-content p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-family: "Bogle", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .parameters {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .one, .two, .three {
+    width: 90%;
+    max-width: 350px;
+  }
+  
+  .links {
+    left: 0;
+    text-align: center;
+  }
+  
+  .reports-heading {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

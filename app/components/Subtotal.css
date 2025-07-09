@@ -1,0 +1,56 @@
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subtotal__content {
+  margin-bottom: 16px;
+}
+
+.subtotal__text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.subtotal__gift {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.proceed {
+  background-color: #0071ce;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.proceed:hover:not(:disabled) {
+  background-color: #004c91;
+}
+
+.proceed:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

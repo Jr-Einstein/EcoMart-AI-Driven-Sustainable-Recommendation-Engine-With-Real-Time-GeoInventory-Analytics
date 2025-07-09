@@ -1,0 +1,220 @@
+.whole {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #f0f6ff;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.img {
+  display: flex;
+  align-items: flex-start;
+  max-width: 600px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.image-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-thumbnails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  object-fit: cover;
+}
+
+.thumbnail:hover {
+  border-color: #0071ce;
+}
+
+.thumbnail.selected {
+  border-color: #ffc220;
+  box-shadow: 0 0 8px rgba(255, 194, 32, 0.5);
+}
+
+.large-image {
+  flex: 1;
+  text-align: center;
+}
+
+.large-image img {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.img-desc {
+  flex: 1;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.img-desc h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.img-desc p {
+  font-size: 16px;
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 28px;
+  margin: 16px 0 !important;
+}
+
+.discounted-price {
+  color: #0071ce;
+  font-weight: 700;
+}
+
+.original-price {
+  text-decoration: line-through;
+  margin-left: 12px;
+  color: #999;
+  font-size: 20px;
+}
+
+.eco_details {
+  background-color: #f0f6ff;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #ffc220;
+  margin: 20px 0;
+}
+
+.carbon_details,
+.badge_details {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.eco-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.eco_image {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+}
+
+.eco_text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0071ce;
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 24px 0;
+  padding-bottom: 20px;
+  gap: 16px;
+}
+
+.icon {
+  text-align: center;
+  flex: 1;
+}
+
+.icon-symbol {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.icon p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin: 0;
+}
+
+.product-data-info {
+  margin: 20px 0;
+}
+
+.product-data-info p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.addtocart {
+  background-color: #0071ce;
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.addtocart:hover {
+  background-color: #004c91;
+}
+
+@media (max-width: 768px) {
+  .whole {
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .img {
+    max-width: 100%;
+  }
+  
+  .img-desc {
+    max-width: 100%;
+  }
+  
+  .icons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .icon {
+    min-width: 120px;
+  }
+}

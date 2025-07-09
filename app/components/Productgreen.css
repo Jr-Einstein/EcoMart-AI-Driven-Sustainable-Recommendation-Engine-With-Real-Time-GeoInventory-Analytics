@@ -1,0 +1,144 @@
+.productg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 16px;
+  width: 280px;
+  min-height: 450px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+  position: relative;
+  border: 2px solid #ffc220;
+}
+
+.productg:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: #ffb000;
+}
+
+.product__bestseller {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #ffc220;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.product__rating {
+  display: flex;
+  margin: 8px 0;
+}
+
+.productg > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 16px 0;
+  border-radius: 4px;
+}
+
+.productg > button {
+  background-color: #0071ce;
+  color: white;
+  padding: 12px 24px;
+  margin-top: auto;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.productg > button:hover {
+  background-color: #004c91;
+}
+
+.product__price {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.product__info {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.product__info p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
+.eco_details {
+  width: 100%;
+  color: #666;
+  margin: 12px 0;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #ffc220;
+}
+
+.eco-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.eco_image {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.carbon_details,
+.badge_details {
+  width: 100%;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.eco_text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0071ce;
+}
+
+.popover_trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.popover_content {
+  position: absolute;
+  background-color: #ffffff;
+  transform: translate(10%, -103%);
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 10;
+  border: 1px solid #e0e0e0;
+}
+
+.popover_content_image {
+  border-radius: 8px;
+  max-width: 200px;
+}
+
+.popover_trigger:hover .popover_content {
+  display: block;
+}

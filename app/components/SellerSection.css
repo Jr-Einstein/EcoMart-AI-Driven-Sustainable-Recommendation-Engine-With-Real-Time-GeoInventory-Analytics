@@ -1,0 +1,134 @@
+.seller-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f0f6ff;
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.seller-image {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.seller-image2 {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.seller-info {
+  padding: 30px;
+  background: linear-gradient(135deg, #ffc220 0%, #ffb000 100%);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.seller-info h2 {
+  font-size: 32px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.seller-info p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.seller-form {
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+.seller-form h3 {
+  color: #0071ce;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form_question {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0071ce;
+  box-shadow: 0 0 0 2px rgba(0, 113, 206, 0.1);
+}
+
+.buttonxyz {
+  background-color: #0071ce;
+  color: white;
+  padding: 14px 32px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buttonxyz:hover {
+  background-color: #004c91;
+}
+
+@media (max-width: 768px) {
+  .seller-info {
+    padding: 20px;
+  }
+  
+  .seller-info h2 {
+    font-size: 24px;
+  }
+  
+  .seller-form {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f8fa;
+  font-size: 17px; /* Increased base size */
+  font-family: "Segoe UI", "Bogle", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6; /* Slightly taller lines */
+}
+
+input::placeholder {
+  color: #004c91;
+  opacity: 1;
+  font-size: 15px;
+}
+
+:root {
+  --walmart-blue: #0071ce;
+  --walmart-dark-blue: #004c91;
+  --walmart-hover-blue: #002e6e;
+  --walmart-yellow: #ffc220;
+  --walmart-light-blue: #f0f6ff;
+  --walmart-gray: #666;
+  --walmart-light-gray: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Segoe UI", "Bogle", sans-serif;
+  line-height: 1.5;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--walmart-light-blue);
+}

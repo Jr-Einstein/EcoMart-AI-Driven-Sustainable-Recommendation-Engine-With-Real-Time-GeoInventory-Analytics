@@ -1,0 +1,76 @@
+.homeg {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  background-color: #f0f6ff;
+  min-height: 50vh;
+}
+
+.home__containerg {
+  width: 100%;
+}
+
+.home__imageg {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+}
+
+.home__rowg {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* EcoMart specific styling */
+.ecomart-banner {
+  background: linear-gradient(135deg, #ffc220 0%, #ffb000 100%);
+  color: #000;
+  padding: 32px;
+  margin: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ecomart-banner h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ecomart-banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.ecomart-section-title {
+  background-color: white;
+  padding: 24px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ecomart-section-title h2 {
+  color: #0071ce;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ecomart-section-title p {
+  color: #666;
+  font-size: 16px;
+}
+
+.badge-banner {
+  margin: 40px 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

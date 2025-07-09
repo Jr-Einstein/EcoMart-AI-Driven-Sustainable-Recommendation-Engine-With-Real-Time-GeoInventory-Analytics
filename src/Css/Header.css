@@ -1,0 +1,127 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #0071ce;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 16px;
+}
+
+.header__logo {
+  width: 120px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 8px;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 16px;
+}
+
+.header__searchInput {
+  height: 44px;
+  padding: 0 16px;
+  border: none;
+  width: 100%;
+  border-radius: 24px 0 0 24px;
+  font-size: 16px;
+  outline: none;
+}
+
+.header__searchButton {
+  height: 44px;
+  width: 48px;
+  background-color: #ffc220;
+  border: none;
+  border-radius: 0 24px 24px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__searchButton:hover {
+  background-color: #ffb000;
+}
+
+.header__searchIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.header__cartIcon {
+  height: 24px;
+  width: 24px;
+  filter: invert(1);
+}
+
+.header__optionLineOne {
+  font-size: 12px;
+  color: white;
+}
+
+.header__optionLineTwo {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.header__optionBasket:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__basketCount {
+  margin-left: 8px;
+  background-color: #ffc220;
+  color: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header__option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+Link {
+  text-decoration: none;
+}
+
+.header__option a {
+  text-decoration: none;
+  color: white;
+}

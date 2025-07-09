@@ -1,0 +1,108 @@
+.whole_feedback {
+  background-color: #f0f6ff;
+  min-height: 100vh;
+  position: relative;
+}
+
+.feed_image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0 0 12px 12px;
+}
+
+.feedback-container {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 420px;
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-container h2 {
+  color: #0071ce;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feedback-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.feedback-container input[type="text"],
+.feedback-container input[type="email"],
+.feedback-container select,
+.feedback-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.feedback-container input:focus,
+.feedback-container textarea:focus,
+.feedback-container select:focus {
+  outline: none;
+  border-color: #0071ce;
+  box-shadow: 0 0 0 2px rgba(0, 113, 206, 0.1);
+}
+
+.feedback-container select {
+  height: 44px;
+}
+
+.feedback-container textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.divbut {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submitbut {
+  background-color: #0071ce;
+  color: white;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitbut:hover {
+  background-color: #004c91;
+}
+
+@media (max-width: 768px) {
+  .feedback-container {
+    position: static;
+    transform: none;
+    width: 90%;
+    margin: 20px auto;
+    right: auto;
+    top: auto;
+  }
+  
+  .feed_image {
+    height: 250px;
+  }
+}
