@@ -1,69 +1,135 @@
-'use client'
+'use client';
 
-import React from "react";
-import "./Headergreen.css";
-import Link from "next/link";
-import { useStateValue } from "../lib/StateProvider";
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { IoIosArrowDown } from 'react-icons/io';
+import { FaHeart, FaUser, FaShoppingCart } from 'react-icons/fa';
+import { useStateValue } from '../lib/StateProvider';
 
-function Headergreen() {
+export default function Headergreen() {
   const [{ basket }] = useStateValue();
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [showPopover, setShowPopover] = useState(true);
+  const [dontShowAgain, setDontShowAgain] = useState(false);
+
+  const closePopover = () => {
+    setDontShowAgain(true);
+    setShowPopover(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const item = document.getElementById('itemToTrack');
+      if (!item) return;
+      const itemRect = item.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      if (itemRect.top < windowHeight && itemRect.bottom > 70) {
+        setShowPopover(true);
+      } else {
+        setShowPopover(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="headerg">
-      <Link href="/">
-        <div className="header__logo">
-          <span className="walmart-logo">Walmart</span>
+    <header className="bg-[#4CBB17] text-white w-full shadow-md font-[EverydaySans,'Helvetica Neue','Helvetica',Arial,sans-serif] text-[17px]">
+      <div className="max-w-[1440px] mx-auto flex items-center px-4 pr-6 h-[88px] gap-x-8">
+        <Link href="/" className="pl-1">
+          <div className="p-2 rounded-full hover:bg-[#006400] transition duration-200">
+            <Image src="/walmart-spark.svg" alt="Eco Logo" width={48} height={48} />
+          </div>
+        </Link>
+
+        <div
+          className="relative flex items-center w-[265px] bg-[#3CA10F] hover:bg-[#006400] px-5 py-[10px] rounded-full cursor-pointer transition-colors"
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
+          <Image src="/pickup-icon.png" alt="Pickup" width={28} height={28} className="mr-2" />
+          <div className="leading-tight">
+            <p className="font-bold text-[15px]">Pickup or delivery?</p>
+            <p className="text-sm text-white truncate w-[160px]">Green Eco Zone • Earth Center</p>
+          </div>
+          <IoIosArrowDown className="ml-2 text-white text-base" />
+          {showDropdown && (
+            <div className="absolute z-50 top-[70px] left-0 w-[360px] bg-[#4CBB17] rounded-2xl p-4 text-white shadow-xl">
+              <div className="flex justify-between px-4 mb-4">
+                {['shipping', 'pickup', 'delivery'].map((type) => (
+                  <div key={type} className="flex flex-col items-center">
+                    <Image src={`/${type}.png`} alt={type} width={50} height={50} />
+                    <span className="text-sm font-semibold mt-2">{type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-white text-black rounded-xl px-4 py-3 mb-3">
+                <p className="text-xs font-semibold">Add an address for shipping and delivery</p>
+                <p className="text-xs text-gray-600 mb-2">Earth Center, EC 10001</p>
+                <button className="w-full text-sm bg-[#4CBB17] text-white py-2 rounded-full">
+                  Add address
+                </button>
+              </div>
+              <div className="bg-white text-black rounded-xl px-4 py-3 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold">Earth Supercenter</p>
+                  <p className="text-xs text-gray-600">123 Green Ave, EC 10001</p>
+                </div>
+                <IoIosArrowDown className="text-xl text-[#4CBB17]" />
+              </div>
+            </div>
+          )}
         </div>
-      </Link>
 
-      <div className="header__search">
-        <input 
-          className="header__searchInput" 
-          type="text" 
-          placeholder="Search everything at Walmart online and in store"
-        />
-        <button className="header__searchButton">
-          <svg className="header__searchIcon" viewBox="0 0 24 24" fill="none">
-            <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
+        <div className="flex-grow max-w-[1875px] ml-8">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search sustainable products..."
+              className="w-full py-4 px-6 pr-12 rounded-full text-[16px] text-[#006400] placeholder-[#006400] outline-none"
+            />
+            <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#006400] p-3 rounded-full">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M21 21l-4.35-4.35M18 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div className="ml-20 flex items-center gap-6 relative">
+          <Link href="/orders">
+            <div className="flex items-center gap-2 hover:bg-[#006400] px-4 py-2 rounded-full transition cursor-pointer">
+              <FaHeart className="text-white text-[18px]" />
+              <div className="leading-tight text-sm">
+                <p className="text-xs">Reorder</p>
+                <p className="font-bold">My Items</p>
+              </div>
+            </div>
+          </Link>
+          <Link href="/login">
+            <div className="flex items-center gap-2 hover:bg-[#006400] px-4 py-2 rounded-full transition cursor-pointer">
+              <FaUser className="text-white text-[18px]" />
+              <div className="leading-tight text-sm">
+                <p className="text-xs">Sign In</p>
+                <p className="font-bold">Account</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/checkout">
+            <div className="flex items-center gap-2 relative hover:bg-[#006400] px-4 py-2 rounded-full transition cursor-pointer">
+              <FaShoppingCart className="text-white text-[20px]" />
+              {basket?.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-yellow-400 text-[#4CBB17] text-xs font-bold rounded-full px-1">
+                  {basket.length}
+                </span>
+              )}
+              <span className="font-bold text-sm">${basket?.length || '0.00'}</span>
+            </div>
+          </Link>
+        </div>
       </div>
-
-      <div className="header__nav">
-        <Link href="/login" className="header__option">
-          <div>
-            <span className="header__optionLineOne">Hello</span>
-            <span className="header__optionLineTwo">Sign In</span>
-          </div>
-        </Link>
-        
-        <Link href="/orders" className="header__option">
-          <div>
-            <span className="header__optionLineOne">Returns</span>
-            <span className="header__optionLineTwo">& Orders</span>
-          </div>
-        </Link>
-
-        <Link href="/dashboard" className="header__option">
-          <div>
-            <span className="header__optionLineOne">Your</span>
-            <span className="header__optionLineTwo">Account</span>
-          </div>
-        </Link>
-
-        <Link href="/checkout" className="header__optionBasket">
-          <div className="cart-container">
-            <svg className="header__cartIcong" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
-            </svg>
-            <span className="header__basketCount">
-              {basket?.length}
-            </span>
-          </div>
-        </Link>
-      </div>
-    </div>
+    </header>
   );
 }
-
-export default Headergreen;

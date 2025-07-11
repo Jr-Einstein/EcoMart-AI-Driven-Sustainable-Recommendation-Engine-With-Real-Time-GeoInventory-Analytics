@@ -1,8 +1,10 @@
+/* Headergreen.css */
+
 .headerg {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #0071ce;
+  background-color: #4CBB17; /* Eco green */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -37,12 +39,13 @@
   border-radius: 24px 0 0 24px;
   font-size: 16px;
   outline: none;
+  color: #006400;
 }
 
 .header__searchButton {
   height: 44px;
   width: 48px;
-  background-color: #ffc220;
+  background-color: #006400; /* Dark green */
   border: none;
   border-radius: 0 24px 24px 0;
   cursor: pointer;
@@ -52,16 +55,16 @@
 }
 
 .header__searchButton:hover {
-  background-color: #ffb000;
+  background-color: #064d00; /* Slightly darker on hover */
 }
 
 .header__searchIcon {
   height: 20px;
   width: 20px;
-  color: #000;
+  color: white;
 }
 
-.header__cartIcong {
+.header__cartIcon {
   height: 24px;
   width: 24px;
   color: white;
@@ -101,8 +104,8 @@
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #ffc220;
-  color: #000;
+  background-color: #ffd700; /* Eco yellow */
+  color: #004d00;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -130,5 +133,5 @@
 }
 
 .header__option:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #006400;
 }
