@@ -5,10 +5,10 @@ import './Imageslidegreen.css';
 
 function ImageSliderGreen() {
   const imgs = [
-    { id: 1, value: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=400&fit=crop' },
-    { id: 2, value: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=400&fit=crop' },
-    { id: 3, value: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&h=400&fit=crop' },
-    { id: 4, value: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=400&fit=crop' },
+    { id: 1, value: 'https://coolerinsights.com/wp-content/uploads/2023/11/Green-Marketing-Sustainable-Packaging.jpg' },
+    { id: 2, value: 'https://www.go-green.ae/wp-content/uploads/2024/10/Market-size-for-eco-friendly-products7.jpg' },
+    { id: 3, value: 'https://d2fryjlmubyuuh.cloudfront.net/wp-content/uploads/2025/06/11115223/Gemini_Generated_Ima._imresizer.webp' },
+    { id: 4, value: 'https://img.freepik.com/premium-photo/flat-lay-sustainable-products-green-background-ecofriendly-lifestyle-concept_14117-652897.jpg' },
   ];
   const [val, setVal] = useState(0);
 

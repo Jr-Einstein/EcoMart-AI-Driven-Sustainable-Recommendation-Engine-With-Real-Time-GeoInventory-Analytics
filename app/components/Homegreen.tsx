@@ -19,10 +19,18 @@ function Homegreen() {
         <p>Shop sustainably with our eco-friendly products that make a positive impact on the environment</p>
       </div>
 
-      <div className="ecomart-section-title">
-        <h2>Featured Sustainable Products</h2>
-        <p>Choose from a wide range of sustainable alternatives to reduce waste and promote a cleaner planet</p>
-      </div>
+      <div className="ecomart-section-title with-icon-right">
+  <div className="ecomart-text-content">
+    <h2>Featured Sustainable Products</h2>
+    <p>Choose from a wide range of sustainable alternatives to reduce waste and promote a cleaner planet</p>
+  </div>
+  <img
+    src="https://static.startuptalky.com/2022/09/Green-Marketing-startuptalky.jpg"
+    alt="Eco Icon"
+    className="icon-right"
+  />
+</div>
+
 
       <div className="home__rowg">
         <Product
@@ -65,7 +73,7 @@ function Homegreen() {
 
       <div className="badge-banner">
         <img
-          src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=300&fit=crop"
+          src="https://renouvo.net/wp-content/uploads/2024/02/what-does-eco-friendly-mean-new-cover.jpg"
           alt="EcoMart Badge System"
           width="100%"
         />

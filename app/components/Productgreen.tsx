@@ -35,20 +35,20 @@ function Product({ title, image, id, price, rating, carbon_red, badge_id }: Prod
   let badge_popover = "";
 
   if (badge_id === 1) {
-    badge_photo = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=200&h=150&fit=crop";
+    badge_photo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
+    badge_popover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
   } else if (badge_id === 2) {
-    badge_photo = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&h=150&fit=crop";
+    badge_photo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
+    badge_popover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
   } else if (badge_id === 3) {
-    badge_photo = "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=200&h=150&fit=crop";
+    badge_photo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
+    badge_popover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
   } else if (badge_id === 4) {
-    badge_photo = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=150&fit=crop";
+    badge_photo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
+    badge_popover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
   } else if (badge_id === 5) {
-    badge_photo = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=200&h=150&fit=crop";
+    badge_photo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
+    badge_popover = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-2R3Km-U4SekGvP5WYJaWJV7LcbIadMgGA&s";
   }
 
   const [isBadgePopoverVisible, setBadgePopoverVisible] = useState(false);
