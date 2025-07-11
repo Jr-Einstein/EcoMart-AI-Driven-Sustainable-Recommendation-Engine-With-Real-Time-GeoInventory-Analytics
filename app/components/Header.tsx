@@ -108,7 +108,7 @@ export default function Header() {
 
         {/* Right Buttons */}
         <div className="ml-20 flex items-center gap-6 relative">
-          <Link href="/my-items">
+          <Link href="/">
             <div className="flex items-center gap-2 hover:bg-[#002e6e] px-4 py-2 rounded-full transition cursor-pointer">
               <FaHeart className="text-white text-[18px]" />
               <div className="leading-tight text-sm">
@@ -117,7 +117,7 @@ export default function Header() {
               </div>
             </div>
           </Link>
-          <Link href="/account">
+          <Link href="/login">
             <div className="flex items-center gap-2 hover:bg-[#002e6e] px-4 py-2 rounded-full transition cursor-pointer">
               <FaUser className="text-white text-[18px]" />
               <div className="leading-tight text-sm">
