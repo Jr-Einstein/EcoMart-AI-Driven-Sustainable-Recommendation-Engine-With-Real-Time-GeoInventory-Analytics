@@ -20,40 +20,42 @@ const products = [
 export default function ProductsPage() {
   return (
     <div className="deals-wrapper">
-      {/* Walmart-style Ad Layout */}
-      <div className="ads-layout">
-        {/* Left 2 stacked ads */}
-        <div className="ad-stack">
-          <div className="ad-card">
-            <p className="ad-title">Up to 50% off school supplies</p>
-            <img src="/ads/crayola.png" alt="Ad" />
+      
+      {/* ✅ Standalone Ad Layout */}
+      <div className="ads-wrapper">
+        <div className="ads-layout">
+          {/* Left 2 stacked ads */}
+          <div className="ad-stack">
+            <div className="ad-card">
+              <img src="/ads/crayola.png" alt="School Supplies" />
+              <p className="ad-title">Up to 50% off school supplies</p>
+            </div>
+            <div className="ad-card">
+              <img src="/ads/cookware.png" alt="Cooking Deals" />
+              <p className="ad-title">Cooking & dining up to 40% off</p>
+            </div>
           </div>
-          <div className="ad-card">
-            <p className="ad-title">Cooking & dining up to 40% off</p>
-            <img src="/ads/cookware.png" alt="Ad" />
-          </div>
-        </div>
 
-        {/* Center banner ad */}
-        <div className="ad-banner">
-          <p>Get Walmart+ for only $49</p>
-          <img src="/ads/walmartplus.png" alt="Ad" />
-        </div>
-
-        {/* Right 2 stacked ads */}
-        <div className="ad-stack">
-          <div className="ad-card">
-            <p className="ad-title">Big Deals on sports—score!</p>
-            <img src="/ads/sports.png" alt="Ad" />
+          {/* Center banner ad */}
+          <div className="ad-banner">
+            <img src="/ads/center-ad.png" alt="Center Banner Ad" />
           </div>
-          <div className="ad-card">
-            <p className="ad-title">Epic food Deals—up to 30% off</p>
-            <img src="/ads/pistachios.png" alt="Ad" />
+
+          {/* Right 2 stacked ads */}
+          <div className="ad-stack">
+            <div className="ad-card">
+              <img src="/ads/sports.png" alt="Sports Deals" />
+              <p className="ad-title">Big Deals on sports—score!</p>
+            </div>
+            <div className="ad-card">
+              <img src="/ads/pistachios.png" alt="Food Deals" />
+              <p className="ad-title">Epic food Deals—up to 30% off</p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Product Rows */}
+      {/* ✅ Product Rows (Preserved) */}
       <h2 className="product-header">Shop Deals</h2>
 
       <div className="products-row">
