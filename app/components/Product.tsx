@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
-import React from "react";
-import "./Product.css";
-import { useStateValue } from "../lib/StateProvider";
+import React from 'react';
+import './Product.css';
+import { useStateValue } from '../lib/StateProvider';
 
 interface ProductProps {
   title: string;
@@ -18,7 +18,7 @@ function Product({ title, image, id, price, rating, badge_id }: ProductProps) {
 
   const addToBasket = () => {
     dispatch({
-      type: "ADD_TO_BASKET",
+      type: 'ADD_TO_BASKET',
       item: {
         id,
         title,
@@ -32,12 +32,25 @@ function Product({ title, image, id, price, rating, badge_id }: ProductProps) {
 
   return (
     <div className="product">
-      <div className="product__bestseller">BESTSELLER</div>
+      {/* Top row: Deal badge + Heart */}
+      <div className="product__top">
+        <span className="product__badge">Deal</span>
+        <span className="product__heart">♡</span>
+      </div>
+
+      {/* Image */}
+      <img
+        src={image}
+        alt={title}
+        style={{ maxHeight: '150px', objectFit: 'contain', marginBottom: '10px' }}
+      />
+
+      {/* Info */}
       <div className="product__info">
-        <p>{title}</p>
+        <p className="product__title">{title}</p>
         <div className="product__price">
-          <small>$</small>
-          <strong>{price}</strong>
+          <span className="product__price--now">${price.toFixed(2)}</span>{' '}
+          <span className="product__price--old">$1,569.00</span>
         </div>
         <div className="product__rating">
           {Array(rating)
@@ -47,8 +60,10 @@ function Product({ title, image, id, price, rating, badge_id }: ProductProps) {
             ))}
         </div>
       </div>
-      <img src={image} alt={title} />
-      <button onClick={addToBasket}>Add to Cart</button>
+
+      <button className="product__button" onClick={addToBasket}>
+        Add to Cart
+      </button>
     </div>
   );
 }

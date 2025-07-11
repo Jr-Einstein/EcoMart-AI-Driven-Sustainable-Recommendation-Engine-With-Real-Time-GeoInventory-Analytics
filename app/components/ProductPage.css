@@ -1,0 +1,79 @@
+.deals-wrapper {
+  padding: 20px 40px;
+  background: #f1f5f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* AD LAYOUT - Walmart Style */
+.ads-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 50px;
+  align-items: stretch;
+}
+
+.ad-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ad-card {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ad-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.ad-card img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.ad-banner {
+  background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+  border-radius: 12px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #111;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  text-align: left;
+}
+
+.ad-banner img {
+  max-height: 100px;
+  object-fit: contain;
+  align-self: center;
+}
+
+/* PRODUCT SECTION */
+.product-header {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0 20px;
+  color: #111827;
+}
+
+/* FULL-WIDTH PRODUCT ROWS */
+.products-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
