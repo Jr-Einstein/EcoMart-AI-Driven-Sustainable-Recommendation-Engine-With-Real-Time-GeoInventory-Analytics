@@ -151,9 +151,10 @@ export default function ProductDetailPage() {
             {allProducts.map((p) => (
               <a
                 key={p.id}
-                href={`/product/${p.id}`}
+                href={p.id === '1005' ? '/product/1005' : `/product/${p.id}`}
                 className="bg-white rounded-xl shadow hover:shadow-xl p-4 transition relative group"
-              >
+>
+
                 {/* Rollback Tag */}
                 {(p.id === '1004' || p.id === '1005') && (
                   <div className="absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">Rollback</div>

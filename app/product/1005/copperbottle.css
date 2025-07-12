@@ -1,0 +1,96 @@
+.copper-bottle-container {
+  padding: 2rem;
+  background-color: #f0fdf4;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bottle-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottle-image {
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.bottle-image:hover {
+  transform: scale(1.05);
+}
+
+.bottle-info {
+  text-align: center;
+}
+
+.bottle-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.bottle-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #047857;
+  margin-bottom: 0.5rem;
+}
+
+.bottle-rating {
+  font-size: 1rem;
+  color: #fbbf24;
+  margin-bottom: 0.5rem;
+}
+
+.bottle-carbon {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.badge-section {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge-image {
+  width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.badge-info-image {
+  width: 100%;
+  max-width: 260px;
+  margin-top: 0.75rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.back-button {
+  margin-top: 2rem;
+  background-color: #059669;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #047857;
+}
