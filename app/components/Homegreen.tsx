@@ -73,7 +73,7 @@ function Homegreen() {
 
       <div className="badge-banner">
         <img
-          src="https://renouvo.net/wp-content/uploads/2024/02/what-does-eco-friendly-mean-new-cover.jpg"
+          src="https://cdn.discordapp.com/attachments/1393492522361290865/1393493640491307008/Untitled_design.png?ex=68735f95&is=68720e15&hm=29622269ed7689251378b5e55e323af6338b165a040fa6e1daf42aeb34b7503b&"
           alt="EcoMart Badge System"
           width="100%"
         />

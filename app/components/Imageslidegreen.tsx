@@ -5,10 +5,10 @@ import './Imageslidegreen.css';
 
 function ImageSliderGreen() {
   const imgs = [
-    { id: 1, value: 'https://coolerinsights.com/wp-content/uploads/2023/11/Green-Marketing-Sustainable-Packaging.jpg' },
-    { id: 2, value: 'https://www.go-green.ae/wp-content/uploads/2024/10/Market-size-for-eco-friendly-products7.jpg' },
-    { id: 3, value: 'https://d2fryjlmubyuuh.cloudfront.net/wp-content/uploads/2025/06/11115223/Gemini_Generated_Ima._imresizer.webp' },
-    { id: 4, value: 'https://img.freepik.com/premium-photo/flat-lay-sustainable-products-green-background-ecofriendly-lifestyle-concept_14117-652897.jpg' },
+    { id: 1, value: 'https://cdn.discordapp.com/attachments/1393492522361290865/1393502706316087316/2.png?ex=68736807&is=68721687&hm=fd3fb220d664617f70b8fcb7c427da16bf36d03fce29ed638814efd88f8ff908&' },
+    { id: 2, value: 'https://cdn.discordapp.com/attachments/1393492522361290865/1393502707653935104/4.png?ex=68736807&is=68721687&hm=666e4f8ada17314a3452f2be1c22f7e27e514c7c4873ce4137af697fd68a6802&' },
+    { id: 3, value: 'https://cdn.discordapp.com/attachments/1393492522361290865/1393502706986913872/3.png?ex=68736807&is=68721687&hm=89e02374fae548a925940fa1b73aae0ba4f268de72456bbad77f599974ac3557&' },
+    { id: 4, value: 'https://cdn.discordapp.com/attachments/1393492522361290865/1393503684335505471/image.png?ex=687368f0&is=68721770&hm=1502582e3e5754199307562a7864aa4fa9b39ab300f078df2000ae574381d2c4&' },
   ];
   const [val, setVal] = useState(0);
 
