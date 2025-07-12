@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "./Productgreen.css";
 import { useStateValue } from "../lib/StateProvider";
+import Link from 'next/link';
 
 interface ProductProps {
   title: string;
@@ -78,7 +79,12 @@ function Product({ title, image, id, price, rating, carbon_red, badge_id }: Prod
             ))}
         </div>
       </div>
-      <img src={image} alt={title} />
+
+      {/* ✅ Image wrapped in Link */}
+      <Link href={`/product/${id}`}>
+        <img src={image} alt={title} className="product-image-clickable" />
+      </Link>
+
       <div className="eco_details">
         <div className="carbon_details">
           <div className="eco-icon">🌱</div>
