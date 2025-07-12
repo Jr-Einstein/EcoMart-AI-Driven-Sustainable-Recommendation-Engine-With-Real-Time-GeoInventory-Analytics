@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
-import './ProductDetail.css';
 import { useParams } from 'next/navigation';
+import Headergreen from '../../components/Headergreen';
+import Footer from '../../components/Footer';
+import './ProductDetail.css';
 
 const allProducts = [
   {
@@ -14,27 +16,43 @@ const allProducts = [
     carbon_red: 70,
     badge_id: 2,
   },
-  // Add more products if needed
 ];
 
 export default function ProductDetailPage() {
   const params = useParams();
-  const productId = params?.id?.toString(); // ✅ safely get the ID
-
+  const productId = params?.id?.toString();
   const product = allProducts.find((p) => p.id === productId);
 
   if (!product) {
-    return <div>Product not found!</div>;
+    return (
+      <>
+        <Headergreen />
+        <div className="product-detail-container">
+          <div className="not-found">Product not found!</div>
+        </div>
+        <Footer />
+      </>
+    );
   }
 
   return (
-    <div className="product-detail">
-      <h2>{product.title}</h2>
-      <img src={product.image} alt={product.title} />
-      <p>Price: ${product.price}</p>
-      <p>Rating: {'⭐'.repeat(product.rating)}</p>
-      <p>Carbon Reduction: {product.carbon_red}%</p>
-      <p>Badge ID: {product.badge_id}</p>
-    </div>
+    <>
+      <Headergreen />
+      <div className="product-detail-container">
+        <div className="product-card">
+          <img src={product.image} alt={product.title} className="product-image" />
+          <div className="product-info">
+            <h2 className="product-title">{product.title}</h2>
+            <p className="product-price">Price: ${product.price}</p>
+            <p className="product-rating">
+              Rating: <span>{'⭐'.repeat(product.rating)}</span>
+            </p>
+            <p className="product-carbon">Carbon Reduction: {product.carbon_red}%</p>
+            <p className="product-badge">Badge ID: {product.badge_id}</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }
