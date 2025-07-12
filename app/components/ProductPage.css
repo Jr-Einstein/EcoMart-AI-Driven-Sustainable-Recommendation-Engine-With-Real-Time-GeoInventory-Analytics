@@ -25,7 +25,7 @@
 .ad-card {
   background: white;
   border-radius: 12px;
-  height: 180px; /* 🆙 increased from 140px */
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@
 .ad-banner {
   background: white;
   border-radius: 12px;
-  height: 360px; /* 🆙 increased from 300px */
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,24 @@
   object-fit: cover;
   border-radius: 12px;
 }
+
+/* === MID-PAGE FULL-WIDTH IMAGE BANNER === */
+.mid-banner {
+  width: 100%;
+  margin: 30px 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mid-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 
 /* === PRODUCT SECTION === */
 .product-header {

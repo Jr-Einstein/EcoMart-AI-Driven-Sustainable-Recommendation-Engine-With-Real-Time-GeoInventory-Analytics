@@ -51,7 +51,13 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* ✅ Product Rows (Preserved) */}
+      {/* ✅ Full-Width Mid-Page Banner */}
+<div className="mid-banner">
+  <img src="/ads/banner.png" alt="Mid Banner" />
+</div>
+
+
+      {/* ✅ Product Rows */}
       <h2 className="product-header">Shop Deals</h2>
 
       <div className="products-row">
