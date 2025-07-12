@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Productgreen.css";
 import { useStateValue } from "../lib/StateProvider";
 
@@ -35,25 +35,23 @@ function Product({ title, image, id, price, rating, carbon_red, badge_id }: Prod
   let badge_popover = "";
 
   if (badge_id === 1) {
-    badge_photo = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=200&h=150&fit=crop";
+    badge_photo = "/badges/badge.png";
+    badge_popover = "/badges/badge-info.png";
   } else if (badge_id === 2) {
-    badge_photo = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&h=150&fit=crop";
+    badge_photo = "/badges/badge1.png";
+    badge_popover = "/badges/badge1-info.png";
   } else if (badge_id === 3) {
-    badge_photo = "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=200&h=150&fit=crop";
+    badge_photo = "/badges/badge2.png";
+    badge_popover = "/badges/badge2-info.png";
   } else if (badge_id === 4) {
-    badge_photo = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=150&fit=crop";
+    badge_photo = "/badges/badge3.png";
+    badge_popover = "/badges/badge3-info.png";
   } else if (badge_id === 5) {
-    badge_photo = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=50&h=50&fit=crop";
-    badge_popover = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=200&h=150&fit=crop";
+    badge_photo = "/badges/badge4.png";
+    badge_popover = "/badges/badge4-info.png";
   }
 
   const [isBadgePopoverVisible, setBadgePopoverVisible] = useState(false);
-  const [showInfoPopover, setInfoShowPopover] = useState(false);
-  const [dontShowAgain, setDontShowAgain] = useState(false);
 
   const showBadgePopover = () => {
     setBadgePopoverVisible(true);
@@ -61,11 +59,6 @@ function Product({ title, image, id, price, rating, carbon_red, badge_id }: Prod
 
   const hideBadgePopover = () => {
     setBadgePopoverVisible(false);
-  };
-
-  const closeInfoPopover = () => {
-    setDontShowAgain(true);
-    setInfoShowPopover(false);
   };
 
   return (
@@ -92,14 +85,16 @@ function Product({ title, image, id, price, rating, carbon_red, badge_id }: Prod
           <p className="eco_text">{carbon_red}% Less Carbon Emission</p>
         </div>
         <div className="badge_details">
-          <div className="popover_trigger">
+          <div
+            className="popover_wrapper"
+            onMouseEnter={showBadgePopover}
+            onMouseLeave={hideBadgePopover}
+          >
             <img
               id="badgeToTrack"
               src={badge_photo}
               alt="Eco Badge"
               className="eco_image"
-              onMouseEnter={showBadgePopover}
-              onMouseLeave={hideBadgePopover}
             />
             {isBadgePopoverVisible && (
               <div className="popover_content">
