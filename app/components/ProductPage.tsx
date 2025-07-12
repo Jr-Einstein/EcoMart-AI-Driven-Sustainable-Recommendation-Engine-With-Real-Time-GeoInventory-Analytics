@@ -28,11 +28,9 @@ export default function ProductsPage() {
           <div className="ad-stack">
             <div className="ad-card">
               <img src="/ads/crayola.png" alt="School Supplies" />
-              <p className="ad-title">Up to 50% off school supplies</p>
             </div>
             <div className="ad-card">
               <img src="/ads/cookware.png" alt="Cooking Deals" />
-              <p className="ad-title">Cooking & dining up to 40% off</p>
             </div>
           </div>
 
@@ -45,17 +43,21 @@ export default function ProductsPage() {
           <div className="ad-stack">
             <div className="ad-card">
               <img src="/ads/sports.png" alt="Sports Deals" />
-              <p className="ad-title">Big Deals on sports—score!</p>
             </div>
             <div className="ad-card">
               <img src="/ads/pistachios.png" alt="Food Deals" />
-              <p className="ad-title">Epic food Deals—up to 30% off</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ✅ Product Rows (Preserved) */}
+      {/* ✅ Full-Width Mid-Page Banner */}
+<div className="mid-banner">
+  <img src="/ads/banner.png" alt="Mid Banner" />
+</div>
+
+
+      {/* ✅ Product Rows */}
       <h2 className="product-header">Shop Deals</h2>
 
       <div className="products-row">
