@@ -1,0 +1,227 @@
+/* copperbottle.css */
+
+.copper-page-container {
+  padding: 20px;
+  background-color: #f6f6f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.copper-product-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  gap: 24px;
+}
+
+.image-slider {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-slider button {
+  background: #e5e5e5;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.image-slider button:hover {
+  background: #ccc;
+}
+
+.product-main-img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.product-main-img:hover {
+  transform: scale(1.05);
+}
+
+.info-section {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.product-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #007f5f;
+}
+
+.product-rating {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.product-carbon {
+  color: #198754;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.buy-now-btn {
+  background-color: #007f5f;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.buy-now-btn:hover {
+  background-color: #005f44;
+}
+
+.qr-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.qr-section .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.about-section {
+  margin-top: 40px;
+}
+
+.about-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #333;
+  font-size: 16px;
+}
+
+.eco-process {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.process-card {
+  background: #eafff0;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  width: 28%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  animation: pulse 5s infinite;
+}
+
+.process-card .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  color: #007f5f;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.product-video {
+  margin: 40px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.charts-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.chart-card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 320px;
+}
+
+.recommended-products {
+  margin-top: 40px;
+}
+
+.rec-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rec-item {
+  text-align: center;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  width: 150px;
+}
+
+.rec-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.certifications {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.badge-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.badge {
+  width: 60px;
+  height: auto;
+}
