@@ -67,6 +67,7 @@
     "react-resizable-panels": "^2.1.7",
     "react-router": "latest",
     "react-router-dom": "latest",
+    "react-simple-maps": "^3.0.0",
     "recharts": "2.15.0",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
