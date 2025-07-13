@@ -1,0 +1,200 @@
+.register-page {
+  background-color: #f0f6ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-logo {
+  cursor: pointer;
+}
+
+.walmart-logo {
+  color: #0071ce;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Bogle", sans-serif;
+}
+
+.register-form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.register-form-container h1 {
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #0071ce;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #0071ce;
+  box-shadow: 0 0 0 2px rgba(0, 113, 206, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c53030;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #fed7d7;
+  font-size: 14px;
+  animation: shake 0.5s ease-in-out;
+}
+
+.success-message {
+  background-color: #f0fff4;
+  color: #38a169;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #9ae6b4;
+  font-size: 14px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.register-button {
+  width: 100%;
+  height: 44px;
+  background-color: #0071ce;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.register-button:hover:not(:disabled) {
+  background-color: #004c91;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 113, 206, 0.3);
+}
+
+.register-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.register-footer {
+  text-align: center;
+}
+
+.register-footer p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.login-link p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.login-link-button {
+  width: 100%;
+  height: 44px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-link-button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .register-form-container {
+    padding: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
