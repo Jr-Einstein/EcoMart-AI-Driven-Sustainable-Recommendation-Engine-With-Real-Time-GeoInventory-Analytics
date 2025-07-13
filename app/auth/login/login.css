@@ -1,186 +1,129 @@
-.login-page {
-  background-color: #f0f6ff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.login-container {
-  width: 100%;
-  max-width: 400px;
-}
-
-.login-header {
+.walmart-login-container {
+  max-width: 420px;
+  margin: 60px auto;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.login-logo {
+.walmart-logo-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.role-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.role-toggle button {
+  padding: 8px 16px;
+  border: 1px solid #0071dc;
+  background: white;
+  color: #0071dc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.role-toggle button.active {
+  background-color: #0071dc;
+  color: white;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.continue-button {
+  width: 100%;
+  background-color: #0071dc;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.walmart-logo {
-  color: #0071ce;
-  font-size: 28px;
-  font-weight: 700;
-  font-family: "Bogle", sans-serif;
+.continue-button:hover {
+  background-color: #005cb8;
 }
 
-.login-form-container {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
+.privacy-note {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #555;
 }
 
-.login-form-container h1 {
+.privacy-note a {
+  color: #0071dc;
+  text-decoration: underline;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-btn {
+  color: #0071dc;
   font-weight: 600;
-  margin-bottom: 24px;
-  color: #0071ce;
-  font-size: 24px;
-  text-align: center;
+  cursor: pointer;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  color: #333;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.form-group input {
-  width: 100%;
-  height: 44px;
-  padding: 0 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.2s;
-  box-sizing: border-box;
-}
-
-.form-group input:focus {
-  outline: none;
-  border-color: #0071ce;
-  box-shadow: 0 0 0 2px rgba(0, 113, 206, 0.1);
-}
-
-.form-group input:disabled {
-  background-color: #f5f5f5;
-  cursor: not-allowed;
-}
-
-.error-message {
-  background-color: #fee;
-  color: #c53030;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #fed7d7;
-  font-size: 14px;
-  animation: shake 0.5s ease-in-out;
+.error-message,
+.success-message {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: red;
 }
 
 .success-message {
-  background-color: #f0fff4;
-  color: #38a169;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #9ae6b4;
-  font-size: 14px;
-  animation: slideIn 0.5s ease-in-out;
+  color: green;
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
-}
-
-@keyframes slideIn {
-  0% { transform: translateY(-10px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-.login-button {
-  width: 100%;
-  height: 44px;
-  background-color: #0071ce;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.login-button:hover:not(:disabled) {
-  background-color: #004c91;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 113, 206, 0.3);
-}
-
-.login-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-.login-footer {
+/* Footer styles */
+.walmart-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 20px 12px;
   text-align: center;
-}
-
-.login-footer p {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #666;
-  line-height: 1.4;
-  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
-.register-link p {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 12px;
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-.register-button {
-  width: 100%;
-  height: 44px;
-  background-color: white;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.register-button:hover {
-  background-color: #f8f9fa;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 480px) {
-  .login-container {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-  
-  .login-form-container {
-    padding: 20px;
-  }
+.footer-links a {
+  color: #0071dc;
+  text-decoration: none;
+  font-weight: 500;
 }
