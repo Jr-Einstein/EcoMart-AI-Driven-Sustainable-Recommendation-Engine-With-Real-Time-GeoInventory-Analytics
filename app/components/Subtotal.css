@@ -1,56 +1,66 @@
 .subtotal {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  gap: 1.2rem;
 }
 
 .subtotal__content {
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .subtotal__text {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.subtotal__text strong {
+  font-weight: 600;
+  color: #000;
 }
 
 .subtotal__gift {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  color: #666;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
 }
 
 .checkbox {
   width: 16px;
   height: 16px;
-  margin-right: 8px;
+  accent-color: #0071dc;
 }
 
+/* Button styling */
 .proceed {
-  background-color: #0071ce;
-  color: white;
-  padding: 12px 24px;
+  padding: 0.9rem 1.2rem;
+  background-color: #0071dc;
   border: none;
-  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
   font-weight: 600;
+  border-radius: 999px;
   cursor: pointer;
-  width: 100%;
-  font-size: 16px;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 113, 220, 0.2);
 }
 
-.proceed:hover:not(:disabled) {
-  background-color: #004c91;
+.proceed:hover {
+  background-color: #005cb8;
+  transform: translateY(-1px);
 }
 
 .proceed:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+  box-shadow: none;
 }

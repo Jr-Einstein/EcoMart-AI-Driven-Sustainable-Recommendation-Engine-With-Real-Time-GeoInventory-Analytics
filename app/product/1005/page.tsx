@@ -792,3 +792,5 @@ const ProductPage: React.FC = () => {
 };
 
 export default ProductPage;
+
+//made changes here

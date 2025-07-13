@@ -3,14 +3,13 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useAuth } from '@/lib/authContext';
 import './login.css';
 
 export default function LoginPage() {
-  const [formData, setFormData] = useState({
-    username: '',
-    password: ''
-  });
+  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [role, setRole] = useState<'consumer' | 'admin'>('consumer');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -18,10 +17,7 @@ export default function LoginPage() {
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,10 +29,8 @@ export default function LoginPage() {
     try {
       const response = await fetch('/api/auth/login', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, role }),
       });
 
       const data = await response.json();
@@ -44,14 +38,8 @@ export default function LoginPage() {
       if (response.ok) {
         setSuccess('Successfully logged in! Redirecting...');
         login(data.token, data.user);
-        
-        // Show success message for 2 seconds then redirect
         setTimeout(() => {
-          if (data.user.role === 'admin') {
-            router.push('/admin/dashboard');
-          } else {
-            router.push('/');
-          }
+          router.push(data.user.role === 'admin' ? '/admin/dashboard' : '/');
         }, 2000);
       } else {
         setError(data.error || 'Login failed. Please check your credentials.');
@@ -64,86 +52,88 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="login-page">
-      <div className="login-container">
-        <div className="login-header">
-          <Link href="/">
-            <div className="login-logo">
-              <span className="walmart-logo">Walmart X EcoMart</span>
-            </div>
+    <>
+      <div className="walmart-login-container">
+        <div className="walmart-logo-image">
+          <Image src="/spark-icon.png" alt="Walmart Logo" width={80} height={80} priority />
+        </div>
+
+        <h2 className="title">Sign in or create your account</h2>
+        <p className="subtitle">
+          Not sure if you have an account? Enter your phone number or email and we’ll check for you.
+        </p>
+
+        <div className="role-toggle">
+          <button
+            className={role === 'consumer' ? 'active' : ''}
+            onClick={() => setRole('consumer')}
+          >
+            Customer Login
+          </button>
+          <button
+            className={role === 'admin' ? 'active' : ''}
+            onClick={() => setRole('admin')}
+          >
+            Admin Login
+          </button>
+        </div>
+
+        {error && <div className="error-message">❌ {error}</div>}
+        {success && <div className="success-message">✅ {success}</div>}
+
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Phone number or email"
+            className="input-box"
+            value={formData.username}
+            onChange={handleChange}
+            required
+            disabled={isLoading}
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            className="input-box"
+            value={formData.password}
+            onChange={handleChange}
+            required
+            disabled={isLoading}
+          />
+
+          <button className="continue-button" type="submit" disabled={isLoading}>
+            {isLoading ? 'Signing In...' : 'Continue'}
+          </button>
+        </form>
+
+        <p className="privacy-note">
+          Securing your personal information is our priority.{' '}
+          <Link href="#">See our privacy measures.</Link>
+        </p>
+
+        <p className="register-link">
+          Don’t have an account?{' '}
+          <Link href="/auth/register">
+            <span className="register-btn">Create your account</span>
           </Link>
-        </div>
-
-        <div className="login-form-container">
-          <h1>Sign In</h1>
-          
-          {error && (
-            <div className="error-message">
-              ❌ {error}
-            </div>
-          )}
-
-          {success && (
-            <div className="success-message">
-              ✅ {success}
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="username">Username or Email</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                value={formData.username}
-                onChange={handleChange}
-                required
-                disabled={isLoading}
-                placeholder="Enter your username or email"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                disabled={isLoading}
-                placeholder="Enter your password"
-              />
-            </div>
-
-            <button 
-              type="submit" 
-              className="login-button"
-              disabled={isLoading}
-            >
-              {isLoading ? 'Signing In...' : 'Sign In'}
-            </button>
-          </form>
-
-          <div className="login-footer">
-            <p>
-              By signing in you agree to the Terms and Conditions of Walmart X EcoMart.
-              Please see our privacy notice and our cookies policy.
-            </p>
-            
-            <div className="register-link">
-              <p>Don't have an account?</p>
-              <Link href="/auth/register">
-                <button className="register-button">
-                  Create your account
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        </p>
       </div>
-    </div>
+
+      {/* Footer */}
+      <footer className="walmart-footer">
+        <p>© 2025 Walmart x EcoMart. All Rights Reserved.</p>
+        <div className="footer-links">
+          <Link href="#">Give feedback</Link>
+          <Link href="#">CA Privacy Rights</Link>
+          <Link href="#">Your Privacy Choices</Link>
+          <Link href="#">Notice at Collection</Link>
+          <Link href="#">Request My Personal Information</Link>
+          <Link href="#">Delete Account</Link>
+          <Link href="#">California Supply Chains Act</Link>
+        </div>
+      </footer>
+    </>
   );
 }

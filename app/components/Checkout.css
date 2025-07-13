@@ -1,40 +1,92 @@
-.checkout__ad {
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
 .checkout {
   display: flex;
-  padding: 20px;
-  background-color: #f0f6ff;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f6f7f8;
   min-height: 100vh;
-  gap: 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .checkout__left {
-  flex: 1;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 0.7;
+  margin-right: 2rem;
 }
 
-.checkout__right {
-  width: 300px;
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 6px;
 }
 
 .checkout__title {
-  margin-right: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid lightgray;
-  color: #0071ce;
-  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.checkout__items {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* RIGHT SIDE */
+.checkout__right {
+  flex: 0.3;
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  align-self: start;
+}
+
+/* Subtotal box (inside Subtotal.tsx, but structure assumed here) */
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subtotal__button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0071dc;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subtotal__button:hover {
+  background-color: #005cb8;
+}
+
+.subtotal__note {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #555;
+}
+
+.subtotal__line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.subtotal__line.bold {
   font-weight: 600;
 }
 
-.ecofriendly {
-  color: #62be3a;
-  font-weight: 700;
-  font-size: 16px;
+.subtotal__line.green {
+  color: #107c10;
+}
+
+.subtotal__line.gray {
+  color: #666;
 }
