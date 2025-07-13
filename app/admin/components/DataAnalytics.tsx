@@ -546,5 +546,6 @@ export const DataAnalytics: React.FC = () => {
         </div>
       </div>
     </div>
+    
   );
 };

@@ -114,7 +114,7 @@ export const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-24">
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg p-6 text-white">
         <h1 className="text-3xl font-bold mb-2">Welcome to Walmart Inventory Management</h1>
@@ -132,9 +132,7 @@ export const Dashboard: React.FC = () => {
                   <p className="text-sm text-gray-600 mb-1">{stat.title}</p>
                   <p className="text-2xl font-bold text-gray-800">{stat.value}</p>
                   <div className="flex items-center mt-2">
-                    <span className={`text-sm font-medium ${
-                      stat.changeType === 'positive' ? 'text-green-600' : 'text-red-600'
-                    }`}>
+                    <span className={`text-sm font-medium ${stat.changeType === 'positive' ? 'text-green-600' : 'text-red-600'}`}>
                       {stat.change}
                     </span>
                     <span className="text-sm text-gray-500 ml-1">vs last month</span>
@@ -221,6 +219,11 @@ export const Dashboard: React.FC = () => {
           </button>
         </div>
       </div>
+
+      {/* Footer Section */}
+      <footer className="bg-blue-600 text-white text-sm text-center p-6 rounded-lg mt-12 shadow-md">
+        <p>&copy; {new Date().getFullYear()} @ Walmart x EcoMart Admin Inventory Dashboard. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

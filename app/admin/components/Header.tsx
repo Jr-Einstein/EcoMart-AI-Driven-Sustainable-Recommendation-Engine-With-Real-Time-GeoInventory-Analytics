@@ -1,5 +1,8 @@
+// app/admin/components/Header.tsx
+'use client';
 import React from 'react';
-import { ShoppingCart, Bell, User, Search } from 'lucide-react';
+import Image from 'next/image';
+import { Bell, User, Search } from 'lucide-react';
 
 export const Header: React.FC = () => {
   return (
@@ -8,11 +11,19 @@ export const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <ShoppingCart className="w-8 h-8 mr-3" />
+            <Image
+              src="/spark-icon.png"
+              alt="Walmart Spark Logo"
+              width={60}
+              height={60}
+              className="mr-3"
+            />
             <span className="text-2xl font-bold">Walmart</span>
-            <span className="ml-2 text-sm bg-blue-500 px-2 py-1 rounded">Inventory Management</span>
+            <span className="ml-2 text-sm bg-blue-500 px-2 py-1 rounded">
+              Inventory Management
+            </span>
           </div>
-          
+
           {/* Search Bar */}
           <div className="flex-1 max-w-lg mx-8">
             <div className="relative">
@@ -24,7 +35,7 @@ export const Header: React.FC = () => {
               />
             </div>
           </div>
-          
+
           {/* Navigation */}
           <div className="flex items-center space-x-4">
             <button className="relative p-2 rounded-lg hover:bg-blue-700 transition-colors">
