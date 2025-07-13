@@ -88,6 +88,14 @@ export default function Headergreen() {
               type="text"
               placeholder="Search sustainable products..."
               className="w-full py-4 px-6 pr-12 rounded-full text-[16px] text-[#006400] placeholder-[#006400] outline-none"
+              onKeyDown={(e) => {
+                if (
+                  e.key === 'Enter' &&
+                  e.currentTarget.value.toLowerCase().includes('water bottle')
+                ) {
+                  window.location.href = '/product/1002';
+                }
+              }}
             />
             <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#006400] p-3 rounded-full">
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

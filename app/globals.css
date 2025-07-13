@@ -43,3 +43,382 @@ h1, h2, h3, h4, h5, h6, p {
   min-height: 100vh;
   background-color: var(--walmart-light-blue);
 }
+
+/* Admin Styles */
+.admin-header {
+  background-color: #0071ce;
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.walmart-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.admin-badge {
+  background-color: #ffc220;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.admin-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.admin-welcome {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-role {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.view-site-btn,
+.logout-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.view-site-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.view-site-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+  background-color: #ffc220;
+  color: #000;
+  border: none;
+}
+
+.logout-btn:hover {
+  background-color: #ffb000;
+}
+
+.admin-sidebar {
+  width: 280px;
+  background-color: white;
+  border-right: 1px solid #e0e0e0;
+  padding: 24px 0;
+}
+
+.admin-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  color: #666;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-left: 4px solid transparent;
+}
+
+.admin-nav-item:hover {
+  background-color: #f8f9fa;
+  color: #0071ce;
+}
+
+.admin-nav-item.active {
+  background-color: #f0f6ff;
+  color: #0071ce;
+  border-left-color: #0071ce;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+.nav-label {
+  font-weight: 500;
+}
+
+.admin-dashboard {
+  max-width: 1200px;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  color: #0071ce;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-icon {
+  font-size: 32px;
+}
+
+.stat-content h3 {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.stat-change {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stat-change.positive {
+  color: #4CAF50;
+}
+
+.dashboard-content {
+  display: grid;
+  gap: 24px;
+}
+
+.dashboard-section {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section h2 {
+  color: #0071ce;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.orders-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.shipped {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.processing {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-badge.delivered {
+  background-color: #e8f5e8;
+  color: #388e3c;
+}
+
+.status-badge.pending {
+  background-color: #fce4ec;
+  color: #c2185b;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.primary {
+  background-color: #0071ce;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background-color: #004c91;
+}
+
+.action-btn.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.action-btn.secondary:hover {
+  background-color: #5a6268;
+}
+
+.action-btn.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.action-btn.success:hover {
+  background-color: #45a049;
+}
+
+.action-btn.warning {
+  background-color: #ffc220;
+  color: #000;
+}
+
+.action-btn.warning:hover {
+  background-color: #ffb000;
+}
+
+.eco-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.eco-stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.eco-icon {
+  font-size: 32px;
+}
+
+.eco-content h4 {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.eco-content p {
+  color: #0071ce;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .admin-header-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions {
+    flex-direction: column;
+  }
+  
+  .eco-stats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -6,9 +6,11 @@ import Link from 'next/link';
 import { IoIosArrowDown } from 'react-icons/io';
 import { FaHeart, FaUser, FaShoppingCart } from 'react-icons/fa';
 import { useStateValue } from '../lib/StateProvider';
+import { useAuth } from '@/lib/authContext';
 
 export default function Header() {
   const [{ basket }] = useStateValue();
+  const { user, logout } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
   const [showPopover, setShowPopover] = useState(true);
   const [dontShowAgain, setDontShowAgain] = useState(false);
@@ -18,6 +20,9 @@ export default function Header() {
     setShowPopover(false);
   };
 
+  const handleLogout = () => {
+    logout();
+  };
   useEffect(() => {
     const handleScroll = () => {
       const item = document.getElementById('itemToTrack');
@@ -117,7 +122,37 @@ export default function Header() {
               </div>
             </div>
           </Link>
-          <Link href="/login">
+          {user ? (
+            <div className="flex items-center gap-2 hover:bg-[#002e6e] px-4 py-2 rounded-full transition cursor-pointer relative group">
+              <FaUser className="text-white text-[18px]" />
+              <div className="leading-tight text-sm">
+                <p className="text-xs">Hello, {user.firstName}</p>
+                <p className="font-bold">Account</p>
+              </div>
+              <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link href="/dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    Dashboard
+                  </Link>
+                  <Link href="/orders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    My Orders
+                  </Link>
+                  {user.role === 'admin' && (
+                    <Link href="/admin/dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                      Admin Panel
+                    </Link>
+                  )}
+                  <button 
+                    onClick={handleLogout}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <Link href="/auth/login">
             <div className="flex items-center gap-2 hover:bg-[#002e6e] px-4 py-2 rounded-full transition cursor-pointer">
               <FaUser className="text-white text-[18px]" />
               <div className="leading-tight text-sm">
@@ -126,6 +161,7 @@ export default function Header() {
               </div>
             </div>
           </Link>
+          )}
 
           {/* Cart */}
           <Link href="/checkout">
