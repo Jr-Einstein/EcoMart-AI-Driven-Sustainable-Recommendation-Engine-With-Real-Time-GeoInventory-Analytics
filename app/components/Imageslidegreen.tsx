@@ -9,6 +9,8 @@ function ImageSliderGreen() {
     { id: 2, value: '/slide/slide2.png' },
     { id: 3, value: '/slide/slide3.png' },
   ];
+
+  //updated the file
   const [val, setVal] = useState(0);
 
   const handleNext = () => {
